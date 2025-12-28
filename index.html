@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketFence - AI-Powered Parental Control</title>
+    <meta name="description" content="Revolutionary AI-powered parental control software that keeps your family safe online. Monitor, protect, and guide your children's digital experience.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="PocketFence Logo" class="logo">
+                <span class="logo-text">PocketFence</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link cta-button">Start Free Trial</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    AI-Powered <span class="gradient-text">Parental Control</span> 
+                    That Actually Works
+                </h1>
+                <p class="hero-description">
+                    Keep your family safe online with revolutionary AI technology. 
+                    Monitor, protect, and guide your children's digital experience 
+                    across all devices - without the complexity.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="startFreeTrial()">Start Free Trial</button>
+                    <button class="btn-secondary" onclick="watchDemo()">Watch Demo</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Families Protected</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Threat Detection</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">AI Monitoring</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="app-interface">
+                            <div class="status-bar">Child Device: Safe ✅</div>
+                            <div class="dashboard-widgets">
+                                <div class="widget">📱 Screen Time: 2h 15m</div>
+                                <div class="widget">🛡️ Threats Blocked: 12</div>
+                                <div class="widget">📍 Location: Home</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Features for Modern Families</h2>
+                <p>Everything you need to keep your family safe in the digital age</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Threat Detection</h3>
+                    <p>Advanced machine learning identifies and blocks threats in real-time, learning from millions of data points to protect your family.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Cross-Platform Monitoring</h3>
+                    <p>Monitor all devices - Windows, iOS, Android, macOS. One dashboard controls everything with seamless synchronization.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Content Filtering</h3>
+                    <p>Intelligent content filtering that adapts to your family's needs. Block inappropriate content while allowing educational material.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Location Tracking</h3>
+                    <p>Keep track of your children's whereabouts with precise GPS tracking and geofencing alerts for peace of mind.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Screen Time Control</h3>
+                    <p>Set healthy digital boundaries with customizable screen time limits and app usage controls that promote balance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Behavioral Analytics</h3>
+                    <p>Get insights into your child's digital behavior with comprehensive reports and AI-powered recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Protection Plan</h2>
+                <p>Flexible pricing for families of all sizes</p>
+            </div>
+            <div class="pricing-toggle">
+                <span class="toggle-label">Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="pricing-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">Annual <span class="discount-badge">Save 20%</span></span>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Basic</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">0</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ 1 Child Device</li>
+                        <li>✅ Basic Content Filtering</li>
+                        <li>✅ Screen Time Limits</li>
+                        <li>✅ Location Tracking</li>
+                        <li>❌ AI Threat Detection</li>
+                        <li>❌ Behavioral Analytics</li>
+                    </ul>
+                    <button class="plan-button btn-outline" onclick="selectPlan('basic')">Get Started</button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Family</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly-price">9.99</span>
+                            <span class="amount annual-price" style="display:none">8.33</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ Up to 5 Devices</li>
+                        <li>✅ Advanced AI Filtering</li>
+                        <li>✅ Smart Screen Time</li>
+                        <li>✅ Real-time Location</li>
+                        <li>✅ AI Threat Detection</li>
+                        <li>✅ Basic Analytics</li>
+                    </ul>
+                    <button class="plan-button btn-primary" onclick="selectPlan('family')">Start Free Trial</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Complete</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount monthly-price">19.99</span>
+                            <span class="amount annual-price" style="display:none">16.66</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ Unlimited Devices</li>
+                        <li>✅ Premium AI Features</li>
+                        <li>✅ Advanced Analytics</li>
+                        <li>✅ Priority Support</li>
+                        <li>✅ Custom Rules</li>
+                        <li>✅ Family Insights</li>
+                    </ul>
+                    <button class="plan-button btn-outline" onclick="selectPlan('complete')">Choose Complete</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Built by Parents, for Parents</h2>
+                    <p>PocketFence was created by a team of parents and cybersecurity experts who understood that existing parental control solutions were either too complicated or ineffective.</p>
+                    <p>Our AI-powered platform learns from millions of online interactions to provide intelligent, adaptive protection that grows with your family. We believe in empowering parents with the tools they need while respecting children's growing independence.</p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <h3>2019</h3>
+                            <p>Founded</p>
+                        </div>
+                        <div class="about-stat">
+                            <h3>50K+</h3>
+                            <p>Families Protected</p>
+                        </div>
+                        <div class="about-stat">
+                            <h3>99.9%</h3>
+                            <p>Uptime</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="team-photo">
+                        <div class="photo-placeholder">👨‍👩‍👧‍👦</div>
+                        <p>Our founding team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have questions? We're here to help.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email Support</h4>
+                            <p>support@pocketfence.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div>
+                            <h4>Live Chat</h4>
+                            <p>Available 24/7 in your dashboard</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone Support</h4>
+                            <p>1-800-POCKETFENCE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Select Topic</option>
+                                <option value="sales">Sales Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="billing">Billing Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">PocketFence</span>
+                    </div>
+                    <p>AI-powered parental control that keeps families safe online.</p>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">🐦</a>
+                        <a href="#">📷</a>
+                        <a href="#">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#">Download</a></li>
+                        <li><a href="#">System Requirements</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Status Page</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PocketFence. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
