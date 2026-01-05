@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download & Setup - PocketFence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><span class="logo-text">PocketFence</span></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#features" class="nav-link">Features</a></li>
+                <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="download.html" class="nav-link">Download</a></li>
+                <li><a href="https://pocketfence.net:5000" class="nav-link">Dashboard</a></li>
+                <li><a href="https://github.com/DJMcClellan1966/PocketFence-Family" class="nav-link cta-button">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h1>Download & Setup Guide</h1>
+                <p>Get PocketFence running in minutes</p>
+            </div>
+
+            <div class="features-grid" style="margin-top: 3rem;">
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <h3>Step 1: Download</h3>
+                    <p>Clone or download from GitHub:</p>
+                    <pre style="background: #f5f5f5; padding: 1rem; border-radius: 8px; text-align: left; overflow-x: auto;">git clone https://github.com/DJMcClellan1966/PocketFence-Family.git</pre>
+                    <a href="https://github.com/DJMcClellan1966/PocketFence-Family" class="btn-primary" style="margin-top: 1rem; display: inline-block;">View on GitHub</a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <h3>Step 2: Prerequisites</h3>
+                    <p>Install required software:</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li> .NET 8.0 SDK (<a href="https://dotnet.microsoft.com/download" target="_blank">Download</a>)</li>
+                        <li> Windows/Linux/macOS</li>
+                        <li> 2GB RAM minimum</li>
+                        <li> Port 5000 available</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <h3>Step 3: Run</h3>
+                    <p>Build and start the dashboard:</p>
+                    <pre style="background: #f5f5f5; padding: 1rem; border-radius: 8px; text-align: left; overflow-x: auto;">dotnet build
+dotnet run dashboard</pre>
+                    <p style="margin-top: 1rem;">Access at: <strong>http://localhost:5000</strong></p>
+                </div>
+            </div>
+
+            <div class="feature-card" style="margin-top: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <h2> Complete Documentation</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; text-align: left;">
+                    <div>
+                        <h4> Authentication</h4>
+                        <ul>
+                            <li><a href="https://github.com/DJMcClellan1966/PocketFence-Family/blob/main/APPLE_OAUTH_SETUP.md">Apple OAuth Setup</a></li>
+                            <li><a href="https://github.com/DJMcClellan1966/PocketFence-Family/blob/main/USER_MANAGEMENT_COMPLETE.md">User Management</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4> Notifications</h4>
+                        <ul>
+                            <li><a href="https://github.com/DJMcClellan1966/PocketFence-Family/blob/main/AI_SMS_SERVICE_GUIDE.md">SMS Service Setup</a></li>
+                            <li><a href="https://github.com/DJMcClellan1966/PocketFence-Family/blob/main/SELF_HOSTED_SMS_GUIDE.md">Self-Hosted SMS</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4> Features</h4>
+                        <ul>
+                            <li><a href="https://github.com/DJMcClellan1966/PocketFence-Family/blob/main/FILTER_LEVELS.md">Filter Levels</a></li>
+                            <li><a href="https://github.com/DJMcClellan1966/PocketFence-Family/blob/main/NETWORK_SETUP.md">Network Setup</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-grid" style="margin-top: 3rem;">
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <h3>Community Support</h3>
+                    <p>Get help from the community:</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li> <a href="https://github.com/DJMcClellan1966/PocketFence-Family/issues">Report Issues</a></li>
+                        <li> <a href="https://github.com/DJMcClellan1966/PocketFence-Family/discussions">Discussions</a></li>
+                        <li> Email: support@pocketfence.net</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <h3>Contribute</h3>
+                    <p>Help improve PocketFence:</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li> Star the repository</li>
+                        <li> Submit pull requests</li>
+                        <li> Improve documentation</li>
+                        <li> Report bugs</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <h3>License</h3>
+                    <p style="margin-top: 1rem;"><strong>MIT License</strong> - Free to use, modify, and distribute</p>
+                    <a href="https://github.com/DJMcClellan1966/PocketFence-Family/blob/main/LICENSE" class="btn-outline" style="margin-top: 1rem; display: inline-block;">View License</a>
+                </div>
+            </div>
+
+            <div class="hero-buttons" style="margin-top: 3rem;">
+                <a href="https://github.com/DJMcClellan1966/PocketFence-Family" class="btn-primary">View on GitHub</a>
+                <a href="https://pocketfence.net:5000" class="btn-secondary">Try Dashboard</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PocketFence</h4>
+                    <p>Open source parental control<br>with local AI filtering</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="https://github.com/DJMcClellan1966/PocketFence-Family">GitHub</a>
+                    <a href="download.html">Download</a>
+                    <a href="https://github.com/DJMcClellan1966/PocketFence-Family/blob/main/README.md">Documentation</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="https://github.com/DJMcClellan1966/PocketFence-Family/blob/main/LICENSE">MIT License</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 PocketFence Open Source Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
