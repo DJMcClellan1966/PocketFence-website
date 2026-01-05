@@ -1,5 +1,5 @@
-// Initialize Stripe (replace with your actual publishable key)
-const stripe = Stripe('pk_test_your_publishable_key_here');
+﻿// Initialize Stripe (replace with your actual publishable key)
+// Open source - no payment processing needed
 
 // Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
@@ -152,7 +152,7 @@ function showPlanModal(plan) {
             <h2 style="margin-bottom: 1rem; color: #4C6EF5;">${plan.name}</h2>
             <p style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">$${plan.price}/month</p>
             <ul style="list-style: none; margin-bottom: 2rem; text-align: left;">
-                ${plan.features.map(feature => `<li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">✅ ${feature}</li>`).join('')}
+                ${plan.features.map(feature => `<li style="padding: 0.5rem 0; border-bottom: 1px solid #eee;">âœ… ${feature}</li>`).join('')}
             </ul>
             <div style="display: flex; gap: 1rem; justify-content: center;">
                 <button onclick="this.parentElement.parentElement.parentElement.remove()" style="
@@ -185,13 +185,12 @@ function proceedToPayment(priceId) {
 
 // Start free trial
 function startFreeTrial() {
-    selectPlan('family'); // Default to Family plan for free trial
+    window.location.href = 'https://github.com/DJMcClellan1966/PocketFence-Family';
 }
 
 // Watch demo functionality
 function watchDemo() {
-    // This would open a demo video or redirect to a demo page
-    showNotification('Demo video would play here', 'info');
+    window.location.href = 'https://pocketfence.net:5000';
 }
 
 // Contact form submission
