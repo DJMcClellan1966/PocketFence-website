@@ -10,8 +10,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://js.stripe.com/v3/"></script>
+    <style>
+        .coming-soon-banner {
+            background: linear-gradient(90deg, #ff9800 0%, #ff5722 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .coming-soon-banner a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body>
+    <div class="coming-soon-banner">🚀 PocketFence is in active development - <a href="early-access.html">Join the waitlist</a> for early access</div>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -22,9 +41,8 @@
             <ul class="nav-menu">
                 <li><a href="#features" class="nav-link">Features</a></li>
                 <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#" class="nav-link cta-button">Start Free Trial</a></li>
+                <li><a href="early-access.html" class="nav-link">Early Access</a></li>
+                <li><a href="https://github.com/DJMcClellan1966/PocketFence-Family" class="nav-link cta-button">GitHub</a></li>
             </ul>
             <div class="hamburger">
                 <span></span><span></span><span></span>
@@ -46,21 +64,21 @@
                     across all devices - without the complexity.
                 </p>
                 <div class="hero-buttons">
-                    <button class="btn-primary" onclick="startFreeTrial()">Start Free Trial</button>
-                    <button class="btn-secondary" onclick="watchDemo()">Watch Demo</button>
+                    <a href="early-access.html" class="btn-primary">Join Waitlist</a>
+                    <a href="https://github.com/DJMcClellan1966/PocketFence-Family" class="btn-secondary">View Source Code</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-number">50K+</span>
-                        <span class="stat-label">Families Protected</span>
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Open Source</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">99.9%</span>
-                        <span class="stat-label">Threat Detection</span>
+                        <span class="stat-number">Privacy</span>
+                        <span class="stat-label">First Design</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">AI Monitoring</span>
+                        <span class="stat-number">Local</span>
+                        <span class="stat-label">Processing</span>
                     </div>
                 </div>
             </div>
@@ -127,79 +145,67 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-header">
-                <h2>Choose Your Protection Plan</h2>
-                <p>Flexible pricing for families of all sizes</p>
-            </div>
-            <div class="pricing-toggle">
-                <span class="toggle-label">Monthly</span>
-                <label class="switch">
-                    <input type="checkbox" id="pricing-toggle">
-                    <span class="slider"></span>
-                </label>
-                <span class="toggle-label">Annual <span class="discount-badge">Save 20%</span></span>
+                <h2>Choose Your Deployment Option</h2>
+                <p>Free forever or fully managed - you decide</p>
             </div>
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="plan-header">
-                        <h3>Basic</h3>
+                        <h3>Self-Hosted</h3>
                         <div class="plan-price">
                             <span class="currency">$</span>
                             <span class="amount">0</span>
-                            <span class="period">/month</span>
-                        </div>
-                    </div>
-                    <ul class="plan-features">
-                        <li>✅ 1 Child Device</li>
-                        <li>✅ Basic Content Filtering</li>
-                        <li>✅ Screen Time Limits</li>
-                        <li>✅ Location Tracking</li>
-                        <li>❌ AI Threat Detection</li>
-                        <li>❌ Behavioral Analytics</li>
-                    </ul>
-                    <button class="plan-button btn-outline" onclick="selectPlan('basic')">Get Started</button>
-                </div>
-                
-                <div class="pricing-card featured">
-                    <div class="popular-badge">Most Popular</div>
-                    <div class="plan-header">
-                        <h3>Family</h3>
-                        <div class="plan-price">
-                            <span class="currency">$</span>
-                            <span class="amount monthly-price">9.99</span>
-                            <span class="amount annual-price" style="display:none">8.33</span>
-                            <span class="period">/month</span>
-                        </div>
-                    </div>
-                    <ul class="plan-features">
-                        <li>✅ Up to 5 Devices</li>
-                        <li>✅ Advanced AI Filtering</li>
-                        <li>✅ Smart Screen Time</li>
-                        <li>✅ Real-time Location</li>
-                        <li>✅ AI Threat Detection</li>
-                        <li>✅ Basic Analytics</li>
-                    </ul>
-                    <button class="plan-button btn-primary" onclick="selectPlan('family')">Start Free Trial</button>
-                </div>
-                
-                <div class="pricing-card">
-                    <div class="plan-header">
-                        <h3>Complete</h3>
-                        <div class="plan-price">
-                            <span class="currency">$</span>
-                            <span class="amount monthly-price">19.99</span>
-                            <span class="amount annual-price" style="display:none">16.66</span>
-                            <span class="period">/month</span>
+                            <span class="period">/forever</span>
                         </div>
                     </div>
                     <ul class="plan-features">
                         <li>✅ Unlimited Devices</li>
-                        <li>✅ Premium AI Features</li>
-                        <li>✅ Advanced Analytics</li>
-                        <li>✅ Priority Support</li>
-                        <li>✅ Custom Rules</li>
-                        <li>✅ Family Insights</li>
+                        <li>✅ All Features</li>
+                        <li>✅ 100% Open Source</li>
+                        <li>✅ Complete Privacy</li>
+                        <li>✅ Local Processing</li>
+                        <li>✅ Community Support</li>
                     </ul>
-                    <button class="plan-button btn-outline" onclick="selectPlan('complete')">Choose Complete</button>
+                    <a href="https://github.com/dj-mccarthy/PocketFence-Family" class="plan-button btn-outline" target="_blank">View on GitHub</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Launching Soon</div>
+                    <div class="plan-header">
+                        <h3>PocketFence Cloud</h3>
+                        <div class="plan-price">
+                            <span class="currency">$</span>
+                            <span class="amount">12.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ Fully Managed Hosting</li>
+                        <li>✅ Automatic Updates</li>
+                        <li>✅ 14-Day Free Trial</li>
+                        <li>✅ Email Support</li>
+                        <li>✅ 20% Launch Discount</li>
+                        <li>✅ Cancel Anytime</li>
+                    </ul>
+                    <a href="early-access.html" class="plan-button btn-primary">Join Waitlist</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Enterprise</h3>
+                        <div class="plan-price">
+                            <span class="amount" style="font-size: 2rem;">Custom</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>✅ White-Label Options</li>
+                        <li>✅ Dedicated Support</li>
+                        <li>✅ SLA Guarantees</li>
+                        <li>✅ Custom Integrations</li>
+                        <li>✅ Training & Onboarding</li>
+                        <li>✅ Priority Features</li>
+                    </ul>
+                    <a href="mailto:enterprise@pocketfence.net" class="plan-button btn-outline">Contact Sales</a>
                 </div>
             </div>
         </div>
